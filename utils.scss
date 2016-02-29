@@ -1,0 +1,72 @@
+/**
+concefly@foxmail.com
+*/
+
+$marginList: 0 5 10 15 20 25 30 35 40 45 50 55 60 65 70 75 80 85 90 95 100 110 120 130 140 150;
+$paddingList: $marginList;
+
+$heightList: 100 200 300 400 500 600 700 800 900 1000;
+
+$line-hight-list: 1  1.1 1.2 1.3 1.4 1.5 1.6 1.7 1.8 1.9 2;
+
+$fontSizeMin: 10;
+$fontSizeMax: 30;
+
+
+
+// ================= margin ================
+
+@each $m in $marginList {
+  .u-m-#{$m} { margin: #{$m}px !important;  }
+  .u-mt-#{$m} { margin-top: #{$m}px !important;  }
+  .u-ml-#{$m} { margin-left: #{$m}px !important;  }
+  .u-mb-#{$m} { margin-bottom: #{$m}px !important;  }
+  .u-mr-#{$m} { margin-right: #{$m}px !important;  }
+  .u-mt-m#{$m} { margin-top: -#{$m}px !important;  }
+  .u-ml-m#{$m} { margin-left: -#{$m}px !important;  }
+  .u-mb-m#{$m} { margin-bottom: -#{$m}px !important;  }
+  .u-mr-m#{$m} { margin-right: -#{$m}px !important;  }
+}
+
+// ================= padding =================
+
+@each $p in $paddingList {
+  .u-p-#{$p} { padding: #{$p}px !important;  }
+  .u-pt-#{$p} { padding-top: #{$p}px !important;  }
+  .u-pl-#{$p} { padding-left: #{$p}px !important;  }
+  .u-pb-#{$p} { padding-bottom: #{$p}px !important;  }
+  .u-pr-#{$p} { padding-right: #{$p}px !important;  }
+  .u-pt-m#{$p} { padding-top: -#{$p}px !important;  }
+  .u-pl-m#{$p} { padding-left: -#{$p}px !important;  }
+  .u-pb-m#{$p} { padding-bottom: -#{$p}px !important;  }
+  .u-pr-m#{$p} { padding-right: -#{$p}px !important;  }
+}
+
+
+// =================== height ==================
+
+@each $p in $heightList {
+  .u-h-#{$p} { height: #{$p}px !important;  }
+}
+
+// =================== line-height ==================
+
+@each $p in $line-hight-list {
+  .u-lh-#{$p * 10} { line-height: #{$p} !important;  }
+}
+
+// ================= font ====================
+
+@for $s from $fontSizeMin through $fontSizeMax {
+  .u-font_#{$s} { font-size: #{$s}px !important; }
+}
+
+.u-font_bold {
+  font-weight: bold !important;
+}
+
+// =================== cursor ================
+
+.u-cursor_pointer {
+  cursor: pointer !important;
+}
